@@ -1,0 +1,14 @@
+  __  __             
+ |  \/  | __ _ _ __  
+ | |\/| |/ _` | '_ \ 
+ | |  | | (_| | |_) |
+ |_|  |_|\__,_| .__/ 
+              |_|    
+------------------------------------
+{{map}}
+Description:
+| {{space}} | - Space Area
+| {{unreachable}} | - unreachable Area
+| {{market}} | - market Area
+| {{player}} | - you
+yourname: {{playername}}

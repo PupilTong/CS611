@@ -1,0 +1,15 @@
+  _   _                  ____       _        _ _     
+ | | | | ___ _ __ ___   |  _ \  ___| |_ __ _(_) |___ 
+ | |_| |/ _ \ '__/ _ \  | | | |/ _ \ __/ _` | | / __|
+ |  _  |  __/ | | (_) | | |_| |  __/ || (_| | | \__ \
+ |_| |_|\___|_|  \___/  |____/ \___|\__\__,_|_|_|___/
+                                                     
+------------------------------------------------------
+Name:{{heroName}} Type:{{heroType}} level:{{level}} alive?:{{alive}}
+current:
+Health:{{hp}}  mana:{{mp}}  exp:{{exp}} money:{{money}}
+Info:
+strength: {{strength}} agility:{{agility}} dexterity:{{dexterity}}
+Damage:{{damage}}    Defense:{{defense}}
+effectsList:
+{{effectsList}}

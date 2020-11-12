@@ -1,0 +1,17 @@
+  _____ _       _     _   
+ |  ___(_) __ _| |__ | |_ 
+ | |_  | |/ _` | '_ \| __|
+ |  _| | | (_| | | | | |_ 
+ |_|   |_|\__, |_| |_|\__|
+          |___/           
+--------------------------------
+Name/mana/strength/agility/dexterity/money/experience
+{{herolist}}
+            
+ __   _____ 
+ \ \ / / __|
+  \ V /\__ \
+   \_/ |___/
+            
+Name/level/damage/defense/dodge chance/type
+{{enemylist}}

@@ -1,0 +1,23 @@
+  _   _                  ____       _           _   
+ | | | | ___ _ __ ___   / ___|  ___| | ___  ___| |_ 
+ | |_| |/ _ \ '__/ _ \  \___ \ / _ \ |/ _ \/ __| __|
+ |  _  |  __/ | | (_) |  ___) |  __/ |  __/ (__| |_ 
+ |_| |_|\___|_|  \___/  |____/ \___|_|\___|\___|\__|
+                                                    
+----------------------------------------------------
+Available warriors
+*********************
+Name/mana/strength/agility/dexterity/starting money/starting experience
+{{warList}}
+----------------------
+
+Available Sorcerers
+*********************
+Name/mana/strength/agility/dexterity/starting money/starting experience
+{{sorList}}
+----------------------
+
+Available Paladins
+*********************
+Name/mana/strength/agility/dexterity/starting money/starting experience
+{{palList}}
