@@ -1,0 +1,5 @@
+java.lang.NullPointerException
+	at MVVM.GameView.renderViewLines(GameView.java:219)
+	at MVVM.GameView.updated(GameView.java:100)
+	at MVVM.GameUIComponmentFactory.generateUIcomponment(GameUIComponmentFactory.java:17)
+	at App.main(App.java:27)
