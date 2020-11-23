@@ -5,6 +5,46 @@
 Hammer_Euv is a terminal UI engine based on my CS 611 OOD homework 4. The basic idea is I prefer to deal with my assignment tasks by using front-end way/patterns/styles.
 
 *The name `Euv` is an reversion of `Vue`, a famous front-end freamwork*
+## Table of Content
+- [Hammer_Euv - a Terminal MVVM UI Engine](#hammer-euv---a-terminal-mvvm-ui-engine)
+  * [Artchiture](#artchiture)
+    + [Intefaces](#intefaces)
+      - [ModelProperty](#modelproperty)
+      - [View](#view)
+      - [ViewModel](#viewmodel)
+      - [Model](#model)
+      - [UIEngine](#uiengine)
+    + [Classes](#classes)
+      - [GameEngine](#gameengine)
+      - [Model](#model-1)
+      - [UIFactory](#uifactory)
+    + [ViewModel](#viewmodel-1)
+  * [View Instructions & View Token & View Render](#view-instructions---view-token---view-render)
+    + [Static Contents](#static-contents)
+    + [element token](#element-token)
+      - [color](#color)
+      - [max](#max)
+      - [min](#min)
+    + [Multiline Block](#multiline-block)
+    + [Single-line Block](#single-line-block)
+    + [Iteration token](#iteration-token)
+    + [Overall output](#overall-output)
+  * [GameUIComponment](#gameuicomponment)
+    + [Show()](#show--)
+    + [close()](#close--)
+  * [TerminalUIEngine](#terminaluiengine)
+    + [Terminal Refresh](#terminal-refresh)
+    + [String requestInput(String message,String ... options)](#string-requestinput-string-message-string--options-)
+    + [showMessage(String m)](#showmessage-string-m-)
+  * [Depoly it in your code](#depoly-it-in-your-code)
+    + [Compile Demo Code](#compile-demo-code)
+    + [Run Demo Code](#run-demo-code)
+  * [TODO & development plan](#todo---development-plan)
+  * [Bugs Alerady know](#bugs-alerady-know)
+  * [Other things.](#other-things)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 ## Artchiture
 ### Intefaces
 #### ModelProperty
