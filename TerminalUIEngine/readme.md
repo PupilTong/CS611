@@ -4,7 +4,7 @@
 
 Hammer_Euv is a terminal UI engine based on my CS 611 OOD homework 4. The basic idea is I prefer to deal with my assignment tasks by using front-end way/patterns/styles.
 
-*The name `Euv` is an reversion of `Vue`, a famous front-end freamwork*
+*The name `Euv` is an reversion of `Vue`, a famous front-end framework*
 ## Table of Content
 - [Hammer_Euv - a Terminal MVVM UI Engine](#hammer-euv---a-terminal-mvvm-ui-engine)
   * [Artchiture](#artchiture)
