@@ -25,7 +25,7 @@ public class TerminalUIEngine implements UIEngine {
     public static final int refreshTime = 50;//3s
     int messageTime = 0;
 
-    TerminalUIEngine(InputStream input, OutputStream output) {
+    public TerminalUIEngine(InputStream input, OutputStream output) {
         this.input = input;
         this.iScanner = new Scanner(input);
         this.output = output;

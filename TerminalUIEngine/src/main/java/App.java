@@ -17,10 +17,10 @@ public final class App {
      */
     public static void main(String[] args) {
         try {
-            GameEngine.setRecourseDirectory("/home/ubuntu/CS611/group/Legend/resources/");
-            GameEngine g = new GameEngine();
-            g.initialUIEngine(System.in, System.out);
-            TerminalUIEngine uie = (TerminalUIEngine) g.getUiEngine();
+            //GameEngine.setRecourseDirectory("/home/ubuntu/CS611/group/Legend/resources/");
+            //GameEngine g = new GameEngine();
+            //g.initialUIEngine(System.in, System.out);
+            TerminalUIEngine uie = new TerminalUIEngine(System.in, System.out);;
             GameView mapView = new GameView(new File("/home/ubuntu/CS611/group/Legend/resources/MapViewTemplete.txt"));
             MapPageModel mapPageModel = new MapPageModel();
             GameUIComponmentFactory factory = new GameUIComponmentFactory();

@@ -10,7 +10,6 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.Callable;
 
-import jdk.internal.org.jline.utils.Log;
 
 import java.util.Iterator;
 

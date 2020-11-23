@@ -26,7 +26,7 @@ public class ListProperty implements Iterable, ModelProperty {
 
     @Override
     public void set(String value) {
-
+        notifyHandler();
     }
     public void set(List<Object> list){
         this.list = list;
