@@ -295,9 +295,9 @@ The method requests input from the user.
 The Engine will show the message at the bottom, and also shows the permitted input, for example
 ```
 test for an input(a,b,c)
-```
 ^                 ^
 message           options
+```
 
 **due to java limitation, we could give feedback on what the user has typed.**
 
