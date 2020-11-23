@@ -340,7 +340,7 @@ test for an input(a,b,c)
 message           options
 ```
 
-**due to java limitation, we could give feedback on what the user has typed.**
+**due to java limitation, we couldn't give feedback on what the user has typed.**
 
 This method will return until the user input a correct string. (a string contains in options )
 
