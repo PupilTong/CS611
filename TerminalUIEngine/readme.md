@@ -308,6 +308,30 @@ This method will return until the user input a correct string. (a string contain
 
 This method will show a notification at the bottom. It will stay there for about 3 seconds.
 
+## Depoly it in your code
+
+An example code:
+```java
+  //creating ui engine
+  TerminalUIEngine uie = new TerminalUIEngine(System.in, System.out);;
+  GameView mapView = new GameView(new File("/home/ubuntu/CS611/group/Legend/resources/MapViewTemplete.txt"));
+  //create an uicomponment
+  MapPageModel mapPageModel = new MapPageModel();
+  GameUIComponmentFactory factory = new GameUIComponmentFactory();
+  GameUIComponment mapPage = factory.generateUIcomponment(mapPageModel, mapView, null, uie);
+  mapPage.show();//show it
+  //request a input
+  uie.requestInput("test for an input", "a","b","c");
+```
+### Compile Demo Code
+Go to `src/main/java/`
+```bash
+javac App.java -Xlint:unchecked
+```
+### Run Demo Code
+```bash
+java App
+```
 ## TODO & development plan
 * add `if` token to allow `conditional rendering`
 ## Bugs Alerady know
