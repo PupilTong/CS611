@@ -1,4 +1,31 @@
-## Hammer - a Terminal MVVM UI Engine
+# Hammer_Euv - a Terminal MVVM UI Engine
+
+*if you have a hammer, everything looks like a nail*
+
+Hammer_Euv is a terminal UI engine based on my CS 611 OOD homework 4. The basic idea is I prefer to deal with my assignment tasks by using front-end way/patterns/styles.
+
+## Artchiture
+### Intefaces
+#### ModelProperty
+
+This interface defines essential methods for two-way binding properties in model. The ViewModel could use this interface and Reflection(will be introduced later) to interating all ModelProperty in your Model.
+
+* View
+
+Defines essential methods for a View.
+
+* ViewModel
+
+Defines a viewmodel control and logic interface.
+
+* Model
+
+All model must implements this interface. Even it's a empty interface, It may add some members in the following version
+
+* UIEngine
+
+UI Engine handles all stuffs relate to ui.
+
 ### run instructions
 In order to run this game, you have to unzip all the resource file to a directiory and modify such setting in `LegendGame` class
 ```
