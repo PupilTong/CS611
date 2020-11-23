@@ -10,21 +10,44 @@ Hammer_Euv is a terminal UI engine based on my CS 611 OOD homework 4. The basic 
 
 This interface defines essential methods for two-way binding properties in model. The ViewModel could use this interface and Reflection(will be introduced later) to interating all ModelProperty in your Model.
 
-* View
+#### View
 
 Defines essential methods for a View.
 
-* ViewModel
+#### ViewModel
 
 Defines a viewmodel control and logic interface.
 
-* Model
+#### Model
 
 All model must implements this interface. Even it's a empty interface, It may add some members in the following version
 
-* UIEngine
+#### UIEngine
 
 UI Engine handles all stuffs relate to ui.
+
+### Classes
+
+#### GameEngine
+
+![](./readme/engine.png)
+
+GameEngine package contains TerminalUIEngine implements UIEngine. It also contains predefined Colors for TerminalUIEngine.(ANSI standards)
+
+#### Model properties
+
+* single line properties
+
+![](./readme/modelproperty0.png)
+
+A single line property means the property's get() method could only get a iterator which contains one value.
+
+* Multiline properties
+
+![](./readme/listproperty.png)
+
+A multiline property means could be outputed to view in multilines. (This not means it must be outputed in multilines. `GameView` will only output the first line if a block is defined as a oneline block. (See `view render` following)
+
 
 ### run instructions
 In order to run this game, you have to unzip all the resource file to a directiory and modify such setting in `LegendGame` class
