@@ -34,7 +34,7 @@ UI Engine handles all stuffs relate to ui.
 
 GameEngine package contains TerminalUIEngine implements UIEngine. It also contains predefined Colors for TerminalUIEngine.(ANSI standards)
 
-#### Model properties
+#### Model
 
 * single line properties
 
@@ -46,7 +46,40 @@ A single line property means the property's get() method could only get a iterat
 
 ![](./readme/listproperty.png)
 
+
 A multiline property means could be outputed to view in multilines. (This not means it must be outputed in multilines. `GameView` will only output the first line if a block is defined as a oneline block. (See `view render` following)
+
+**the list properties could not be changed by set(String value) method**
+This method will call notify the property changed handlers only.
+use `set(List<Object> list)` 
+or 
+modify the origional container and then call this method for sending a notification.
+
+* Model 
+
+![](./readme/modeldemo.png)
+
+This is a simple Model example. The `GameViewModel` will automaticlly bind each member in a model to a fields(which has a same name) in the view.
+
+* Observer Pattern
+
+Every properties has a observer set. The set contains all viewmodels hooked for this property. Once the property has been changed(`Set()`), the hook set will be iteratored.
+
+#### UIFactory
+
+**Factory Pattern**
+
+![](./readme/UIFactory.png)
+
+You need to use this `GameUIComponmentFactory` to generate your GameUIComponment.
+Instant your Model, ViewModel and View, then use the factory to generate your GameUIComponment.
+
+### ViewModel
+
+See`view render`
+
+![](./readme/VVM.png)
+
 
 
 ### run instructions
