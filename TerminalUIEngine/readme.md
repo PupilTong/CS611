@@ -4,11 +4,12 @@
 
 Hammer_Euv is a terminal UI engine based on my CS 611 OOD homework 4. The basic idea is I prefer to deal with my assignment tasks by using front-end way/patterns/styles.
 
+*The name `Euv` is an reversion of `Vue`, a famous front-end freamwork*
 ## Artchiture
 ### Intefaces
 #### ModelProperty
 
-This interface defines essential methods for two-way binding properties in model. The ViewModel could use this interface and Reflection(will be introduced later) to interating all ModelProperty in your Model.
+This interface defines essential methods for two-way binding properties in the model. The ViewModel could use this interface and Reflection(will be introduced later) to interacting all ModelProperty in your Model.
 
 #### View
 
@@ -20,11 +21,11 @@ Defines a viewmodel control and logic interface.
 
 #### Model
 
-All model must implements this interface. Even it's a empty interface, It may add some members in the following version
+All model must implement this interface. Even it's an empty interface, It may add some members in the following version
 
 #### UIEngine
 
-UI Engine handles all stuffs relate to ui.
+UI Engine handles all kinds of stuff related to UI.
 
 ### Classes
 
@@ -39,32 +40,32 @@ GameEngine package contains TerminalUIEngine implements UIEngine. It also contai
 
 **Observer Pattern**
 
-Every model property has a observer set. The set contains all viewmodels hooked for this property. Once the property has been changed(`Set()`), the hook set will be iteratored.
+Every model property has an observer set. The set contains all viewmodels hooked for this property. Once the property has been changed(`Set()`), the hook set will be iterator.
 
 * single line properties
 
 ![](./readme/modelproperty0.png)
 
-A single line property means the property's get() method could only get a iterator which contains one value.
+A single line property means the property's get() method could only get an iterator that contains one value.
 
 * Multiline properties
 
 ![](./readme/listproperty.png)
 
 
-A multiline property means could be outputed to view in multilines. (This not means it must be outputed in multilines. `GameView` will only output the first line if a block is defined as a oneline block. (See `view render` following)
+A multiline property means could be output to view in multiline. (This not means it must be output in multiline. `GameView` will only output the first line if a block is defined as an oneline block. (See `view render` following)
 
 **the list properties could not be changed by set(String value) method**
 This method will call notify the property changed handlers only.
 use `set(List<Object> list)` 
 or 
-modify the origional container and then call this method for sending a notification.
+modify the original container and then call this method for sending a notification.
 
 * Model 
 
 ![](./readme/modeldemo.png)
 
-This is a simple Model example. The `GameViewModel` will automaticlly bind each member in a model to a fields(which has a same name) in the view.
+This is a simple Model example. The `GameViewModel` will automatically bind each member in a model to a field (which has the same name) in the view.
 
 #### UIFactory
 
@@ -73,7 +74,7 @@ This is a simple Model example. The `GameViewModel` will automaticlly bind each 
 ![](./readme/UIFactory.png)
 
 You need to use this `GameUIComponmentFactory` to generate your GameUIComponment.
-Instant your Model, ViewModel and View, then use the factory to generate your GameUIComponment.
+Instant your Model, ViewModel, and View, then use the factory to generate your GameUIComponment.
 
 ### ViewModel
 
@@ -119,9 +120,9 @@ The static contents will not be changed in the render process
 ```
 <{{property1}},color=(color)>
 ```
-A element token will contains values by `,` and the first value must be a Singleline or a  Multiline Block. Element token could define the text color in the Singleline or a  Multiline Block, the maxium length of the output of this token by using `max` and `min`.
+An element token will contain values by `,` and the first value must be a Single-line or a  Multiline Block. Element token could define the text color in the Single-line or a  Multiline Block, the maximum length of the output of this token by using `max` and `min`.
 
-color could also be a dynamic singleline block.
+color could also be a dynamic single-line block.
 
 #### color 
 Possible value:
@@ -137,36 +138,36 @@ CYAN
 
 case sensitivity: NO
 
-Must has a value: YES.
+Must have a value: YES.
 
-if set a illegal color value, view render will use the default color.
+if set an illegal color value, view render will use the default color.
 
 #### max
 
-`max=10` set the maxium length of charactor for block's one line output(in this case, 10 characters). The render will only count the final output for a element token, this means settings(color setting,max setting, min setting) will not be counted in the length. 
+`max=10` set the maximum length of characters for the block's one line output(in this case, 10 characters). The render will only count the final output for an element token, this means settings(color setting, max setting, min setting) will not be counted in the length. 
 
-**Except you only use the `max`**, in this case the max length will equals length of this element token.
+**Except you only use the `max`**, in this case, the max length will equal to the length of this element token.
 
-Render will cut from beginning if length exceeded.
+Render will cut from the beginning if the length is exceeded.
 
 case sensitivity: Must a number
 
-Must has a value: NO
+Must have a value: NO
 
 
 #### min
 
 
-`min=10` set the minimum length of charactor for block's one line output(in this case, 10 characters). The render will only count the final output for a element token, this means settings(color setting,max setting, min setting) will not be counted in the length. 
+`min=10` set the minimum length of characters for the block's one line output(in this case, 10 characters). The render will only count the final output for an element token, this means settings(color setting, max setting, min setting) will not be counted in the length. 
 
-**Except you only use the `min`**, in this case the min length will equals length of this element token.
+**Except you only use the `min`**, in this case, the min length will equal to the length of this element token.
 
 
 Render will add blank to the end.
 
 case sensitivity: Must a number
 
-Must has a value: NO
+Must have a value: NO
 
 ### Multiline Block
 ```
@@ -175,18 +176,18 @@ Must has a value: NO
 
 property: property1
 
-Render will iterate the property1 and use the style setting in the `element token`v to all lines.
+Render will iterate the property1 and use the style set in the `element token` to all lines.
 
-If you have more than one multiline block in one line, The render will iterater them together until all property's iterators don't have more elements. Render will try to use less lines to do the iterations. If the length of blocks are different, render wont add blanks automaticlly. See `min` to keep your view pattern.
+If you have more than one multiline block in one line, The render will iterator them together until all property's iterators don't have more elements. Render will try to use fewer lines to do the iterations. If the length of blocks is different, render won't add blanks automatically. See `min` to keep your view pattern.
 
-### Singleline Block
+### Single-line Block
 ```
 <{{property1}},color=(color)>
 ```
 
 property: color
 
-Render will get the first result of color property's iterator.
+Render will get the first result of the color property's iterator.
 
 ### Iteration token
 ```
@@ -196,7 +197,7 @@ Render will get the first result of color property's iterator.
 ```
 A typical Iteration block.
 
-Render will iterating the `elements` modelproperty and the value of every interating loop will be `e2`.
+Render will iterate the `elements` model property and the value of every iterating loop will be `e2`.
 
 If elements contains `{"element0","element1","element2" }`
 The output should be 
@@ -205,7 +206,7 @@ element0
 element1 
 element2 
 ```
-(color dosen't show)
+(color doesn't show)
 
 **Every element in that block will be copied on iterating**
 * `elements = {"element0","element1","element2" }`
@@ -275,21 +276,21 @@ element2                        element2
 
 ![](./readme/terminal.png)
 
-### GameUIComponment
-GameUIComponment is a core class of the Terminal Engine. Just like web pages on web browser, GameUIComponments is a similar concept as web pages. 
-UIEngine maintains a GameUIComponment stack. The top of stack is the Componment currently showing. 
-#### Show()
-if you show a componment, this means you will add the componment to the top of the stack, or move this componment in the stack to the top.
-#### close()
-if you show a componment, this means you will remove the componment from stack.
+## GameUIComponment
+GameUIComponment is a core class of the Terminal Engine. Just like web pages on a web browser, GameUIComponments is a similar concept to web pages. 
+UIEngine maintains a GameUIComponment stack. The top of the stack is the Component currently showing. 
+### Show()
+if you show a component, this means you will add the component to the top of the stack, or move this component in the stack to the top.
+### close()
+if you show a component, this means you will remove the component from the stack.
 
-### TerminalUIEngine
-TerminalUIEngine interact with the console IO streaming.
-#### Terminal Refresh
-The TerminalUIEngine will creade a new thread refresh the console output in 20hz.
-####  String requestInput(String message,String ... options)
-The method requests a input from user. 
-`message` defines message shown at the bottom
+## TerminalUIEngine
+TerminalUIEngine interacts with the console IO streaming.
+### Terminal Refresh
+The TerminalUIEngine will create a new thread to refresh the console output in 20hz.
+###  String requestInput(String message,String ... options)
+The method requests input from the user. 
+`message` defines the message shown at the bottom
 `options` defines correct inputs
 The Engine will show the message at the bottom, and also shows the permitted input, for example
 ```
@@ -298,10 +299,19 @@ test for an input(a,b,c)
 ^                 ^
 message           options
 
-**due to java limitation, we could give a feedback of what user has typed.**
+**due to java limitation, we could give feedback on what the user has typed.**
 
-This method will return until user input a correct string.(a string contains in options )
+This method will return until the user input a correct string. (a string contains in options )
 
-#### showMessage(String m)
+### showMessage(String m)
 
 This method will show a notification at the bottom. It will stay there for about 3 seconds.
+
+## TODO & development plan
+* add `if` token to allow `conditional rendering`
+## Bugs Alerady know
+
+* due to java limitation, we could give feedback on what the user has typed.
+
+## Other things.
+One week is really not enough to finish this project. 
