@@ -209,6 +209,7 @@ element2
 (color doesn't show)
 
 **Every element in that block will be copied on iterating**
+(This is also an example for Nested loop)
 * `elements = {"element0","element1","element2" }`
 * `property1 = "this is a string property"`
 * `color = "green"`
