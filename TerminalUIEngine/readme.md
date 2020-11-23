@@ -271,3 +271,37 @@ element1                        element1
 element2                        element2 
                                 element3 
 ```
+(color doesn't show)
+
+![](./readme/terminal.png)
+
+### GameUIComponment
+GameUIComponment is a core class of the Terminal Engine. Just like web pages on web browser, GameUIComponments is a similar concept as web pages. 
+UIEngine maintains a GameUIComponment stack. The top of stack is the Componment currently showing. 
+#### Show()
+if you show a componment, this means you will add the componment to the top of the stack, or move this componment in the stack to the top.
+#### close()
+if you show a componment, this means you will remove the componment from stack.
+
+### TerminalUIEngine
+TerminalUIEngine interact with the console IO streaming.
+#### Terminal Refresh
+The TerminalUIEngine will creade a new thread refresh the console output in 20hz.
+####  String requestInput(String message,String ... options)
+The method requests a input from user. 
+`message` defines message shown at the bottom
+`options` defines correct inputs
+The Engine will show the message at the bottom, and also shows the permitted input, for example
+```
+test for an input(a,b,c)
+```
+^                 ^
+message           options
+
+**due to java limitation, we could give a feedback of what user has typed.**
+
+This method will return until user input a correct string.(a string contains in options )
+
+#### showMessage(String m)
+
+This method will show a notification at the bottom. It will stay there for about 3 seconds.
